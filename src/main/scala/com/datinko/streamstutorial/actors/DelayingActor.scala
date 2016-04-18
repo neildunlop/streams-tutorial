@@ -25,7 +25,7 @@ class DelayingActor(name: String, delay: Long) extends ActorSubscriber with Lazy
       logger.debug(s"Message in delaying actor sink ${self.path} '$actorName': $msg")
       consumeCounter.increment(1)
     case OnComplete =>
-      logger.debug(s"Completed Messgae received in ${self.path} '$actorName'")
+      logger.debug(s"Completed Message received in ${self.path} '$actorName'")
     case msg =>
       logger.debug(s"Unknown message $msg in $actorName: ")
   }
